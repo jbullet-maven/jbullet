@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cz.advel.jbullet</groupId>
     <artifactId>jbullet</artifactId>
-    <version>20101010-SNAPSHOT</version>
+    <version>20101010</version>
     <packaging>jar</packaging>
     <name>jbullet</name>
     <description>JBullet - Java port of Bullet Physics Library</description>
@@ -130,15 +129,13 @@
                         <phase>process-classes</phase>
                         <configuration>
                             <tasks>
-                                <property name="compile_classpath" refid="maven.compile.classpath"/>
+                                <property name="compile_classpath" refid="maven.compile.classpath" />
 
-                                <taskdef name="instrument-stack"
-                                         classname="cz.advel.stack.instrument.InstrumentationTask"
-                                         classpath="${compile_classpath}">
+                                <taskdef name="instrument-stack" classname="cz.advel.stack.instrument.InstrumentationTask" classpath="${compile_classpath}">
                                 </taskdef>
 
                                 <instrument-stack dest="${project.build.outputDirectory}" packageName="com.bulletphysics" isolated="true">
-                                    <fileset dir="${project.build.outputDirectory}" includes="com/bulletphysics/**"/>
+                                    <fileset dir="${project.build.outputDirectory}" includes="com/bulletphysics/**" />
                                 </instrument-stack>
                             </tasks>
                         </configuration>
