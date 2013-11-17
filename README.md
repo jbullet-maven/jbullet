@@ -12,7 +12,7 @@ To add jbullet to your project' dependencies, use:
         <dependency>
             <groupId>cz.advel.jbullet</groupId>
             <artifactId>jbullet</artifactId>
-            <version>20101010</version>
+            <version>20101010-1</version>
         </dependency>
         ...
     </dependencies>
