@@ -1,0 +1,7 @@
+Differences from original non-maven source tree:
+* src/com/bulletphysics/demos/ removed (they will be in separate artifact)
+* sources of jstackalloc merged with main source tree and they are parially
+  (the part which responsible of instrumentation) excluded from jar-creating
+  process.
+* unneded parts (as lib/ directory, since all dependencies are now handled by
+  maven, parts of netbeans build-system, dist/, and empty test/) were removed.
