@@ -14,6 +14,9 @@
         <artifactId>oss-parent</artifactId>
         <version>7</version>
     </parent>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <licenses>
         <license>
             <name>The zlib/libpng License (Zlib)</name>
@@ -44,15 +47,7 @@
             </roles>
         </developer>
     </developers>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
     <dependencies>
-        <dependency>
-            <groupId>cz.advel.jbullet</groupId>
-            <artifactId>jstackalloc</artifactId>
-            <version>20080716-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>java3d</groupId>
             <artifactId>vecmath</artifactId>
