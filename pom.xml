@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>cz.advel.jbullet</groupId>
     <artifactId>jbullet</artifactId>
-    <version>20101011-SNAPSHOT</version>
+    <version>20101010-1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>jbullet</name>
     <description>JBullet - Java port of Bullet Physics Library</description>
@@ -56,12 +56,13 @@
             <groupId>asm</groupId>
             <artifactId>asm-all</artifactId>
             <version>3.1</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>ant</groupId>
             <artifactId>ant</artifactId>
             <version>1.6.5</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
     <build>
@@ -72,7 +73,7 @@
                 <version>2.3.2</version>
                 <configuration>
                     <excludes>
-                        <exclude>cz/advel/stack/instrument/**</exclude>
+                        <exclude>cz/**</exclude>
                     </excludes>
                 </configuration>
                 <executions>
@@ -91,7 +92,7 @@
                 <version>2.2.1</version>
                 <configuration>
                     <excludes>
-                        <exclude>cz/advel/stack/instrument/**</exclude>
+                        <exclude>cz/**</exclude>
                     </excludes>
                 </configuration>
                 <executions>
@@ -109,7 +110,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.7</version>
                 <configuration>
-                    <excludePackageNames>cz.advel.stack.instrument</excludePackageNames>
+                    <excludePackageNames>cz</excludePackageNames>
                 </configuration>
                 <executions>
                     <execution>
